@@ -1,6 +1,7 @@
 import { Observable } from "rxjs";
 
 import { createPopper } from '@popperjs/core';
+import { Tooltip, Toast, Popover } from 'bootstrap';
 import "./styles/index.scss";
 
 const h2 = document.querySelector("#rxjs") as HTMLHeadElement;
