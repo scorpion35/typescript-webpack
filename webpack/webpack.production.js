@@ -20,7 +20,7 @@ module.exports = merge(common, {
     new HtmlWebpackPlugin({
       title: 'Hello webpack!',
       template: './src/template.html',
-      filename: 'index.[contenthash].html',
+      filename: 'index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
