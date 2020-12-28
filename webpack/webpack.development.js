@@ -5,6 +5,30 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
   mode: "development",
+  module: {
+    rules: [
+      {
+        test: /.scss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: () => {
+                  return [
+                    require('autoprefixer')
+                  ];
+                }
+              }
+            }
+          },
+          "sass-loader" // 1. Turns SASS into CSS
+        ]
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Hello webpack!',

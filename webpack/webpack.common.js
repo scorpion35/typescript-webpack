@@ -1,30 +1,13 @@
 const { resolve } = require('path');
 
 module.exports = {
-  entry: resolve(__dirname, '../src/index.ts'),
+  entry: {
+    index: resolve(__dirname, '../src/index.ts'),
+    vendor: resolve(__dirname, '../src/vendor.ts')
+  },
   devtool: 'inline-source-map',
   module: {
     rules: [
-      {
-        test: /.scss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: () => {
-                  return [
-                    require('autoprefixer')
-                  ];
-                }
-              }
-            }
-          },
-          "sass-loader" // 1. Turns SASS into CSS
-        ]
-      },
       {
         test: /\.tsx?$/,
         use: "ts-loader"
