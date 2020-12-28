@@ -17,4 +17,4 @@ obs.subscribe(o => {
   h2.innerHTML = textNode.textContent;
 });
 
-console.log('Hello, Webpack!');
+console.log('Hello, Webpack 2!');
