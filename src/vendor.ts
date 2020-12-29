@@ -1,5 +1,3 @@
-import "@popperjs/core";
-// import "bootstrap";
 import { Tooltip, Popover } from "bootstrap";
 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
